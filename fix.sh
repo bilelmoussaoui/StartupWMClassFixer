@@ -5,11 +5,11 @@
 # Licence : The script is released under GPL
 
 applications_location=("/usr/share/applications/"
-			"/usr/local/share/applications/"
-			"/usr/local/share/applications/kde4"
-			"/home/${SUDO_USER:-$USER}/.local/share/applications/"
-			"/home/${SUDO_USER:-$USER}/.local/share/applications/kde4/"
-			$(xdg-user-dir DESKTOP))
+          "/usr/local/share/applications/"
+          "/usr/local/share/applications/kde4"
+          "/home/${SUDO_USER:-$USER}/.local/share/applications/"
+          "/home/${SUDO_USER:-$USER}/.local/share/applications/kde4/"
+          $(xdg-user-dir DESKTOP))
 IFS=,
 
 #The script needs root privileges
@@ -30,7 +30,11 @@ fi
       for app_location in "${applications_location[@]}"
       do
         desktop_file="$app_location$launcher.desktop"
+        backup_file="$desktop_file.backup"
         if [ -f "$desktop_file" ]; then
+          if [ ! -f "$backup_file" ]; then
+            cp "$desktop_file" "$backup_file"
+          fi
           if ! grep -Gq "StartupWMClass\s*=\s*$startupwmclass$" "$desktop_file"; then
             echo "StartupWMClass = $startupwmclass" >> "$desktop_file"
             echo "Fixed : $name"
