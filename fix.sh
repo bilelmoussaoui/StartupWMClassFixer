@@ -24,6 +24,18 @@ if [ ! -f "database.csv" ]; then
   exit 1
 fi
 
+if [ -z "$1" ]; then
+    mode="apply"
+else
+    case $1 in
+        -r|--revert)
+            mode="revert";;
+        -a|--apply)
+            mode="apply";;
+    esac
+fi
+
+if [ "$mode" == "apply" ]; then
 {
   read;
   while read -r name launcher startupwmclass; do
@@ -32,10 +44,10 @@ fi
         desktop_file="$app_location$launcher.desktop"
         backup_file="$desktop_file.backup"
         if [ -f "$desktop_file" ]; then
-          if [ ! -f "$backup_file" ]; then
-            cp "$desktop_file" "$backup_file"
-          fi
           if ! grep -Gq "StartupWMClass\s*=\s*$startupwmclass$" "$desktop_file"; then
+            if [ ! -f "$backup_file" ]; then
+              cp "$desktop_file" "$backup_file"
+            fi
             old_startup=$(grep "^StartupWMClass=*" "$desktop_file"  | sed "s/StartupWMClass.*=//")
             if [ -z "$old_startup" ]; then
               echo "StartupWMClass = $startupwmclass" >> "$desktop_file"
@@ -48,3 +60,19 @@ fi
       done
   done
 }< "database.csv"
+elif [ "$mode" == "revert" ]; then
+{
+  read;
+  while read -r name launcher startupwmclass; do
+      for app_location in "${applications_location[@]}"
+      do
+        desktop_file="$app_location$launcher.desktop"
+        backup_file="$desktop_file.backup"
+        if [[ -f "$desktop_file" && -f "$backup_file" ]]; then
+          mv "$backup_file" "$desktop_file"
+          echo "Reverted : $name"
+        fi
+      done
+  done
+}< "database.csv"
+fi
