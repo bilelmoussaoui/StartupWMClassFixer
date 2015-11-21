@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Author : Bilal Elmoussaoui, Andreas Angerer
-#Version : 0.1 beta
-#Licence : The script is released under GPL
+# Version : 0.1 beta
+# Licence : The script is released under GPL
 
 applications_location=("/usr/share/applications/" "/usr/local/share/applications/" "/usr/local/share/applications/kde4" "/home/${SUDO_USER:-$USER}/.local/share/applications/" "/home/${SUDO_USER:-$USER}/.local/share/applications/kde4/" $(xdg-user-dir DESKTOP))
 
