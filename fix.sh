@@ -15,7 +15,7 @@ fi
 while read -r name launcher startupwmclass; do
     for app_location in "${applications_location[@]}"
     do  
-        if [ -f "$app_location$new_current.desktop" ]; then
+        if [ -f "$app_location$launcher.desktop" ]; then
         	
         fi 
     done
