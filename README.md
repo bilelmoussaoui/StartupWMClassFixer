@@ -8,10 +8,13 @@ Will help you fix unrecognized, ugly or double icons in Linux.
   git clone https://github.com/bil-elmoussaoui/StartupWMClassFixer.git
   ```
   2. Open the script using 
+  
   ```bash
   sudo bash fix.sh
   ```
+  
   or 
+  
   ```bash
   sudo bash fix.sh --apply 
   ```
