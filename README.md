@@ -27,3 +27,14 @@ Open the terminal and use
 
 ### Why using `sudo` ?
 Almost all the application desktop files are stored in `/usr/share/applications` that's why we need root permissions to modify those files.
+
+
+### How to contribute? 
+  1. Open the application 
+  2. Open Gnome Monitor System
+  3. Go to processus tab and look for the application you just opened
+  4. Clone the repository and modify the database file following this
+      ```bash
+        Applicatio Name, Desktop file name, Processus name
+      ```
+  5. Create a pull request
