@@ -12,11 +12,15 @@ if [ "$(id -u)" != "0" ]; then
 	exit 1
 fi
 
-while read -r name launcher startupwmclass; do
-    for app_location in "${applications_location[@]}"
-    do  
-        if [ -f "$app_location$launcher.desktop" ]; then
-        	
-        fi 
-    done
-done < "database.csv"
+{
+	read;
+	while read -r name launcher startupwmclass; do
+	    for app_location in "${applications_location[@]}"
+	    do  
+	        if [ -f "$app_location$launcher.desktop" ]; then
+	        	echo "$launcher"
+	        fi
+	    done
+	done 
+}< "database.csv"
+
