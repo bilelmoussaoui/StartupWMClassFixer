@@ -24,3 +24,6 @@ Open the terminal and use
 ```bash
   sudo bash fix.sh --revert
 ```
+
+### Why using `sudo` ?
+Almost all the application desktop files are stored in `/usr/share/applications` that's why we need root permissions to modify those files.
