@@ -19,8 +19,9 @@ fi
 	    do  
 	    	desktop_file="$app_location$launcher.desktop"
 	        if [ -f "$desktop_file" ]; then
-            	if ! grep -Gq "StartupWMClass\s*=\s*$startupwmclass$" "$desktop_file"; then
-        			echo "$launcher"
+                if ! grep -Gq "StartupWMClass\s*=\s*$startupwmclass$" "$desktop_file"; then
+	        		echo "StartupWMClass = $startupwmclass" >> "$desktop_file"	
+	        		echo "Fixed : $name"
 	        	fi
 	        fi
 	    done
