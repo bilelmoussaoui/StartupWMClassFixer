@@ -36,7 +36,12 @@ fi
             cp "$desktop_file" "$backup_file"
           fi
           if ! grep -Gq "StartupWMClass\s*=\s*$startupwmclass$" "$desktop_file"; then
-            echo "StartupWMClass = $startupwmclass" >> "$desktop_file"
+            old_startup=$(grep "^StartupWMClass=*" "$desktop_file"  | sed "s/StartupWMClass.*=//")
+            if [ -z "$old_startup" ]; then
+              echo "StartupWMClass = $startupwmclass" >> "$desktop_file"
+            else
+              sed -i -- "s#$old_startup#$startupwmclass#g" "$desktop_file"
+            fi
             echo "Fixed : $name"
           fi
         fi
