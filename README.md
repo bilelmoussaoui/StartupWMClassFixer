@@ -36,6 +36,6 @@ Almost all the application desktop files are stored in `/usr/share/applications`
   4. Clone the repository and modify the database file following this
 
   ```bash
-    Applicatio Name, Desktop file name, Processus name
+    Application Name, Desktop file name, Processus name
   ```
   5. Create a pull request
