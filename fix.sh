@@ -5,11 +5,11 @@
 # Licence : The script is released under GPL
 
 applications_location=("/usr/share/applications/"
-									"/usr/local/share/applications/"
-									"/usr/local/share/applications/kde4"
-									"/home/${SUDO_USER:-$USER}/.local/share/applications/"
-									"/home/${SUDO_USER:-$USER}/.local/share/applications/kde4/"
-									$(xdg-user-dir DESKTOP))
+							"/usr/local/share/applications/"
+							"/usr/local/share/applications/kde4"
+							"/home/${SUDO_USER:-$USER}/.local/share/applications/"
+							"/home/${SUDO_USER:-$USER}/.local/share/applications/kde4/"
+							$(xdg-user-dir DESKTOP))
 IFS=,
 
 #The script needs root privileges
@@ -20,8 +20,8 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 if [ ! -f "database.csv" ]; then
-	echo "Please download the database file first! Exiting."
-	exit 1
+  echo "Please download the database file first! Exiting."
+  exit 1
 fi
 
 {
