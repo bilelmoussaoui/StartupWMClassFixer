@@ -10,6 +10,9 @@ applications_location=("/usr/share/applications/"
           "/home/${SUDO_USER:-$USER}/.local/share/applications/"
           "/home/${SUDO_USER:-$USER}/.local/share/applications/kde4/"
           $(xdg-user-dir DESKTOP))
+
+backup_ignore=( $(xdg-user-dir DESKTOP) )
+
 IFS=,
 
 #The script needs root privileges
@@ -40,11 +43,12 @@ if [ "$mode" == "apply" ]; then
   while read -r name launcher startupwmclass; do
       for app_location in "${applications_location[@]}"
       do
+        echo "$app_location"
         desktop_file="$app_location$launcher.desktop"
         backup_file="$desktop_file.bak"
         if [ -f "$desktop_file" ]; then
           if ! grep -Gq "StartupWMClass\s*=\s*$startupwmclass$" "$desktop_file"; then
-            if [ ! -f "$backup_file" ]; then
+            if [[ ! -f "$backup_file" && ! $app_location =~ $backup_ignore ]]; then
               cp "$desktop_file" "$backup_file"
             fi
             old_startup=$(grep "^StartupWMClass=*" "$desktop_file"  | sed "s/StartupWMClass.*=//")
@@ -59,6 +63,7 @@ if [ "$mode" == "apply" ]; then
       done
   done
 }< "database.csv"
+echo "$app_location"
 elif [ "$mode" == "revert" ]; then
 {
   read;
@@ -67,7 +72,7 @@ elif [ "$mode" == "revert" ]; then
       do
         desktop_file="$app_location$launcher.desktop"
         backup_file="$desktop_file.bak"
-        if [[ -f "$desktop_file" && -f "$backup_file" ]]; then
+        if [[ -f "$desktop_file" && -f "$backup_file" && ! $app_location =~ $backup_ignore ]]; then
           mv "$backup_file" "$desktop_file"
           echo "Reverted : $name"
         fi
