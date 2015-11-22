@@ -10,7 +10,7 @@ Will help you fix unrecognized, ugly or double icons in Linux.
   2. Open the script using 
   
   ```bash
-  sudo bash fix.sh
+  sudo ./fix
   ```
   
   or 
