@@ -12,7 +12,7 @@ applications_location=("/usr/share/applications/"
           "/home/${SUDO_USER:-$USER}/.local/share/applications/"
           "/home/${SUDO_USER:-$USER}/.local/share/applications/kde4/"
           $desktop_dir)
-          
+
 backup_ignore=( $desktop_dir )
 
 IFS=,
@@ -26,6 +26,8 @@ fi
 
 if [ ! -f "database.csv" ]; then
   wget https://github.com/bil-elmoussaoui/StartupWMClassFixer/blob/master/database.csv
+  chmod +x ./database.csv
+  chown -R ${SUDO_USER:-$USER} ./database.csv
 fi
 
 if [ -z "$1" ]; then
