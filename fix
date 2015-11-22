@@ -26,7 +26,6 @@ fi
 
 if [ ! -f "database.csv" ]; then
   wget https://github.com/bil-elmoussaoui/StartupWMClassFixer/blob/master/database.csv
-  chmod +x ./database.csv
   chown -R ${SUDO_USER:-$USER} ./database.csv
 fi
 
