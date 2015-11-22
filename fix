@@ -4,14 +4,16 @@
 # Version : 0.1 beta
 # Licence : The script is released under GPL
 
+desktop_dir="$(sudo -u ${SUDO_USER:-$USER} xdg-user-dir DESKTOP)/"
+
 applications_location=("/usr/share/applications/"
           "/usr/local/share/applications/"
-          "/usr/local/share/applications/kde4/"
+          "/usr/local/share/applications/kde4"
           "/home/${SUDO_USER:-$USER}/.local/share/applications/"
           "/home/${SUDO_USER:-$USER}/.local/share/applications/kde4/"
-          $(xdg-user-dir DESKTOP))
-
-backup_ignore=( $(xdg-user-dir DESKTOP) )
+          $desktop_dir)
+          
+backup_ignore=( $desktop_dir )
 
 IFS=,
 
