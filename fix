@@ -43,7 +43,6 @@ if [ "$mode" == "apply" ]; then
   while read -r name launcher startupwmclass; do
       for app_location in "${applications_location[@]}"
       do
-        echo "$app_location"
         desktop_file="$app_location$launcher.desktop"
         backup_file="$desktop_file.bak"
         if [ -f "$desktop_file" ]; then
@@ -63,7 +62,6 @@ if [ "$mode" == "apply" ]; then
       done
   done
 }< "database.csv"
-echo "$app_location"
 elif [ "$mode" == "revert" ]; then
 {
   read;
