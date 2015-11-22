@@ -16,13 +16,13 @@ Will help you fix unrecognized, ugly or double icons in Linux.
   or 
   
   ```bash
-  sudo bash fix.sh --apply 
+  sudo ./fix --apply 
   ```
   
 ### How to revert
 Open the terminal and use
 ```bash
-  sudo bash fix.sh --revert
+  sudo ./fix --revert
 ```
 
 ### Why using `sudo` ?
