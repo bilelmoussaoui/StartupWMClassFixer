@@ -27,7 +27,7 @@ fi
 if [ -z "$1" ]; then
     mode="apply"
 else
-    case $@ in
+    case $1 in
         -r|--revert)
             mode="revert";;
         -a|--apply)
@@ -35,9 +35,13 @@ else
     esac
 fi
 
-if [[ "$@" == "--force-update" || "$@" == "-u" || ! -f "database.csv" ]]; then
+if [[ "$2" == "--force-update" || "$2" == "-u" ]]; then
   echo "Updating the database file.."
-  wget https://github.com/bil-elmoussaoui/StartupWMClassFixer/blob/master/database.csv -O ./database.csv
+  rm ./database.csv
+fi
+
+if [ ! -f "database.csv" ]; then
+  wget https://github.com/bil-elmoussaoui/StartupWMClassFixer/blob/master/database.csv
   chown -R ${SUDO_USER:-$USER} ./database.csv
 fi
 
