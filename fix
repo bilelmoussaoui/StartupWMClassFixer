@@ -24,11 +24,6 @@ if [ "$(id -u)" != "0" ]; then
   exit 1
 fi
 
-if [ ! -f "database.csv" ]; then
-  wget https://github.com/bil-elmoussaoui/StartupWMClassFixer/blob/master/database.csv
-  chown -R ${SUDO_USER:-$USER} ./database.csv
-fi
-
 if [ -z "$1" ]; then
     mode="apply"
 else
@@ -38,6 +33,15 @@ else
         -a|--apply)
             mode="apply";;
     esac
+fi
+
+if [[ "$2" == "--force-update" || "$2" == "-u" ]]; then
+  rm ./database.csv
+fi
+
+if [ ! -f "database.csv" ]; then
+  wget https://github.com/bil-elmoussaoui/StartupWMClassFixer/blob/master/database.csv
+  chown -R ${SUDO_USER:-$USER} ./database.csv
 fi
 
 if [ "$mode" == "apply" ]; then
