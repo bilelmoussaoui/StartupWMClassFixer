@@ -37,7 +37,7 @@ fi
 
 if [[ "$@" == "--force-update" || "$@" == "-u" || ! -f "database.csv" ]]; then
   echo "Updating the database file.."
-  wget https://github.com/bil-elmoussaoui/StartupWMClassFixer/blob/master/database.csv -O ./database.csv
+  wget https://raw.githubusercontent.com/bil-elmoussaoui/StartupWMClassFixer/master/database.csv -O database.csv
   chown -R ${SUDO_USER:-$USER} ./database.csv
 fi
 
