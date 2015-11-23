@@ -28,7 +28,7 @@ Open the terminal and use
 ### How to use latest version of database file
 You can use 
 ```bash
- sudo ./fix --apply --force-update
+ sudo ./fix --force-update
 ```
 
 ### Why using `sudo` ?
