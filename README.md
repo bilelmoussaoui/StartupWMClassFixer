@@ -25,6 +25,16 @@ Open the terminal and use
   sudo ./fix --revert
 ```
 
+### How to use latest version of database file
+You can use 
+```bash
+ sudo ./fix --apply --force-update
+```
+Or 
+```bash
+ sudo ./fix -a -u
+```
+
 ### Why using `sudo` ?
 Almost all the application desktop files are stored in `/usr/share/applications` that's why we need root permissions to modify those files.
 
