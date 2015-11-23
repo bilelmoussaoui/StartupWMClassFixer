@@ -1,5 +1,6 @@
 Application Name,Desktop file name,StartupWMClass
 Android Studio,android-studio,jetbrains-studio
+Android Studio,jetbrains-studio,jetbrains-studio
 Arduino IDE,arduino,processing-app-Baselocaldomain
 Copy,copy,CopyAgent
 Counter-Strike: Global Offensive,Counter-Strike Global Offensive,csgo_linux
