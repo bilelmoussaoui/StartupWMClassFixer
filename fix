@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Author : Bilal Elmoussaoui, Andreas Angerer
-# Version : 0.1 beta
+# Version : 0.1
 # Licence : The script is released under GPL
 
 desktop_dir="$(sudo -u ${SUDO_USER:-$USER} xdg-user-dir DESKTOP)/"
