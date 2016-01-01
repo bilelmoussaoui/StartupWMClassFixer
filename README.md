@@ -35,6 +35,11 @@ You can use
 Almost all the application desktop files are stored in `/usr/share/applications` that's why we need root permissions to modify those files.
 
 
+### How the script works? 
+The script will modify the desktop file of supported applications ([list of supported applications](https://github.com/bil-elmoussaoui/StartupWMClassFixer/blob/master/database.csv)) and add/modify `StartupWMClass` key. 
+
+For more informations about `StartupWMClass` see [Recognized desktop entry keys](http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s05.html). 
+
 ### How to contribute? 
   1. Open the application 
   2. Open Gnome Monitor System
