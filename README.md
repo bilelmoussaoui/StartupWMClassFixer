@@ -39,9 +39,8 @@ Almost all the application desktop files are stored in `/usr/share/applications`
   1. Open the application 
   2. Open Gnome Monitor System
   3. Go to processes tab and look for the application you just opened
-  4. Clone the repository and modify the database file following this
-  
-  ```bash
+  4. Clone the repository and modify the database file following this <br/>
+  <code>
     Application Name, Desktop file name, Processus name
-  ```
+  </code>
   5. Create a pull request
