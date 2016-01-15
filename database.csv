@@ -8,6 +8,8 @@ Double Action: Boogaloo,Double Action Boogaloo,hl2_linux
 f.lux,fluxgui,Fluxapp.py
 FoxitReader,FoxitReader,FoxitReader
 Geogebra,geogebra,org-geogebra-desktop-GeoGebra3D
+Genymotion,genymobile-genymotion,Genymotion
+Genymotion Player,genymotion-player,Genymotion Player
 GNU Octave,www.octave.org-octave,Octave-gui
 Google Chrome (beta),google-chrome-beta,Google-chrome-beta
 Google Chrome (stable),google-chrome,Google-chrome-stable
@@ -15,6 +17,7 @@ Google Chrome (unstable),google-chrome-unstable,Google-chrome-unstable
 Half-Life 2,Half-Life 2,hl2_linux
 Half-Life 2: Lost Coast,Half-Life 2 Lost Coast,hl2_linux
 Intellij IDEA Community Edition,intellij-idea-community,jetbrains-idea-ce
+PlayOnLinux,PlayOnLinux,Mainwindow.py
 Portal,Portal,hl2_linux
 Portal 2,Portal 2,portal2_linux
 Pycharm Community Edition,pycharm,jetbrains-pycharm-ce
@@ -25,3 +28,4 @@ Telegram,telegram,Telegram
 Telegram,telegramdesktop,Telegram
 Telegram,telegram-desktop,Telegram
 The Stanley Parable,The Stanley Parable,stanley_linux
+Zotero,zotero,Zotero
