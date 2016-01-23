@@ -25,14 +25,14 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 if [ -z "$1" ]; then
-    mode="apply"
+  mode="apply"
 else
-    case $@ in
-        -r|--revert)
-            mode="revert";;
-        -a|--apply)
-            mode="apply";;
-    esac
+  case $@ in
+    -r|--revert)
+      mode="revert";;
+    -a|--apply)
+      mode="apply";;
+  esac
 fi
 
 if [[ "$@" == "--force-update" || "$@" == "-u" || ! -f "database.csv" ]]; then
@@ -44,31 +44,31 @@ fi
 {
   read;
   while read -r name launcher startupwmclass; do
-      for app_location in "${applications_location[@]}"
-      do
-        desktop_file="$app_location$launcher.desktop"
-        backup_file="$desktop_file.bak"
-        if [ "$mode" == "apply" ]; then
-          if [ -f "$desktop_file" ]; then
-          	if ! grep -Pq "StartupWMClass\s*=\s*$startupwmclass$" "$desktop_file"; then
-              if [[ ! -f "$backup_file" && ! $app_location =~ $backup_ignore ]]; then
-                cp "$desktop_file" "$backup_file"
-              fi
-              old_startup=$(grep -Pq "^StartupWMClass\s*=*" "$desktop_file"  | sed "s/StartupWMClass.*=//")
-              if [ -z "$old_startup" ]; then
-                echo "StartupWMClass=$startupwmclass" >> "$desktop_file"
-              else
-                sed -i -- "s#$old_startup#$startupwmclass#g" "$desktop_file"
-              fi
-              echo "Fixed : $name"
+    for app_location in "${applications_location[@]}"
+    do
+      desktop_file="$app_location$launcher.desktop"
+      backup_file="$desktop_file.bak"
+      if [ "$mode" == "apply" ]; then
+        if [ -f "$desktop_file" ]; then
+          if ! grep -Pq "StartupWMClass\s*=\s*$startupwmclass$" "$desktop_file"; then
+            if [[ ! -f "$backup_file" && ! $app_location =~ $backup_ignore ]]; then
+              cp "$desktop_file" "$backup_file"
             fi
-          fi
-        elif [ "$mode" == "revert" ]; then
-          if [[ -f "$desktop_file" && -f "$backup_file" && ! $app_location =~ $backup_ignore ]]; then
-            mv "$backup_file" "$desktop_file"
-            echo "Reverted : $name"
+            old_startup=$(grep -Pq "^StartupWMClass\s*=*" "$desktop_file"  | sed "s/StartupWMClass.*=//")
+            if [ -z "$old_startup" ]; then
+              echo "StartupWMClass=$startupwmclass" >> "$desktop_file"
+            else
+              sed -i -- "s#$old_startup#$startupwmclass#g" "$desktop_file"
+            fi
+            echo "Fixed : $name"
           fi
         fi
-      done
+      elif [ "$mode" == "revert" ]; then
+        if [[ -f "$desktop_file" && -f "$backup_file" && ! $app_location =~ $backup_ignore ]]; then
+          mv "$backup_file" "$desktop_file"
+          echo "Reverted : $name"
+        fi
+      fi
+    done
   done
 }< "database.csv"
