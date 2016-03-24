@@ -1,7 +1,7 @@
 # StartupWMClassFixer
 Will help you fix unrecognized, ugly or double icons in Linux.
 
-### How to use
+## How to use
   1. Download the [zip folder](https://github.com/bil-elmoussaoui/StartupWMClassFixer/archive/master.zip) or clone the repository
   
   ```bash
@@ -31,9 +31,13 @@ You can use
  sudo ./fix --force-update
 ```
 
+## FAQ
+
 ### Why using `sudo` ?
 Almost all the application desktop files are stored in `/usr/share/applications` that's why we need root permissions to modify those files.
 
+### Why Wine applications are not supported? 
+Wine applications have two `WM_CLASS` values. The default one and `wine`. Which makes it impossible to change the icon as `wine` icon will always be used instead of the default one.
 
 ### How the script works? 
 The script will modify the desktop file of supported applications ([list of supported applications](https://github.com/bil-elmoussaoui/StartupWMClassFixer/blob/master/database.csv)) and add/modify `StartupWMClass` key. 
