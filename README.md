@@ -42,10 +42,10 @@ For more informations about `StartupWMClass` see [Recognized desktop entry keys]
 
 ### How to contribute? 
   1. Open the application 
-  2. Open Gnome Monitor System
-  3. Go to processes tab and look for the application you just opened
+  2. Open the terminal and type `xprop WM_CLASS`
+  3. The mouse cursor will change, click on the application and copy the `WM_CLASS(STRING)` value
   4. Clone the repository and modify the database file following this <br/>
   <code>
-    Application Name, Desktop file name, Processus name
+    Application Name, Desktop file name, WM_CLASS
   </code>
   5. Create a pull request
