@@ -23,6 +23,7 @@ Insync,insync,Insync.py
 Intellij IDEA Community Edition,intellij-idea-community,jetbrains-idea-ce
 Kdenlive,org.kde.kdenlive,kdenlive
 Minecraft,minecraft,net-minecraft-bootstrap-Bootstrap
+Limbo,LIMBO,limbo
 Okular,okular,Okular
 PlayOnLinux,PlayOnLinux,Mainwindow.py
 PlayOnLinux,playonlinux,Mainwindow.py
@@ -31,6 +32,7 @@ Portal 2,Portal 2,portal2_linux
 Pushbullet Indicator,extras-pushbullet-indicator,Pushbullet-indicator
 Pycharm Community Edition,pycharm,jetbrains-pycharm-ce
 SFLphone,sflphone,Sflphone-client-gnome
+Sid Meier's Civilization V,Sid Meier's Civilization V,Civ5XP
 Sublime Text 3,sublime-text-3,Subl
 SVG Cleaner,svgcleaner,Svgcleaner-gui
 Team Fortress 2,Team Fortress 2,hl2_linux
