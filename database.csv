@@ -4,9 +4,11 @@ Android SDK Manager,android-sdk,Android SDK Manager
 Android Studio,android-studio,jetbrains-studio
 Arduino IDE,arduino,processing-app-Baselocaldomain
 Atom,atom,atom
+BADLAND Game of the Year Edition,BADLAND Game of the Year Edition,badland
 BOINC Manager,boinc,Boincmgr
 Copy,copy,CopyAgent
-Counter-Strike: Global Offensive,Counter-Strike Global Offensive,csgo_linux
+Counter-Strike: Global Offensive,Counter-Strike Global Offensive,csgo_linux64
+Don't Starve,Don't Starve,dontstarve_steam
 Double Action: Boogaloo,Double Action Boogaloo,hl2_linux
 f.lux,fluxgui,Fluxapp.py
 FoxitReader,FoxitReader,FoxitReader
@@ -24,7 +26,7 @@ Insync,insync,Insync.py
 Intellij IDEA Community Edition,intellij-idea-community,jetbrains-idea-ce
 Kdenlive,org.kde.kdenlive,kdenlive
 Minecraft,minecraft,net-minecraft-bootstrap-Bootstrap
-Limbo,LIMBO,limbo
+Limbo,LIMBO,LIMBO
 Okular,okular,Okular
 PlayOnLinux,PlayOnLinux,Mainwindow.py
 PlayOnLinux,playonlinux,Mainwindow.py
