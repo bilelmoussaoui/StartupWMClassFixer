@@ -22,10 +22,14 @@ Google Chrome (stable),google-chrome,Google-chrome-stable
 Google Chrome (unstable),google-chrome-unstable,Google-chrome-unstable
 Half-Life,Half-Life,hl_linux
 Half-Life Blue Shift,Half-Life Blue Shift,hl_linux
+Half-Life Deathmatch Source,Half-Life Deathmatch Source,hl_linux
+Half-Life Opposing Force,Half-Life Opposing Force,hl_linux
+Half-Life Source,Half-Life Source,hl_linux
 Half-Life 2,Half-Life 2,hl2_linux
+Half-Life 2 Deathmatch,Half-Life 2 Deathmatch,hl2_linux
 Half-Life 2 Episode One,Half-Life 2 Episode One,hl2_linux
 Half-Life 2 Episode Two,Half-Life 2 Episode Two,hl2_linux
-Half-Life 2: Lost Coast,Half-Life 2 Lost Coast,hl2_linux
+Half-Life 2 Lost Coast,Half-Life 2 Lost Coast,hl2_linux
 Heimdall Frontend,heimdall,heimdall-frontend
 Insync,insync,Insync.py
 Intellij IDEA Community Edition,intellij-idea-community,jetbrains-idea-ce
@@ -48,6 +52,7 @@ Sid Meier's Civilization V,Sid Meier's Civilization V,Civ5XP
 Sublime Text 3,sublime-text-3,Subl
 Super Hexagon,Super Hexagon,superhexagon.x86_64
 SVG Cleaner,svgcleaner,Svgcleaner-gui
+Team Fortress Classic,Team Fortress Classic,hl_linux
 Team Fortress 2,Team Fortress 2,hl2_linux
 Telegram,telegram,Telegram
 Telegram,telegramdesktop,Telegram
