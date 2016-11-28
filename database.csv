@@ -33,6 +33,7 @@ PlayOnLinux,PlayOnLinux,Mainwindow.py
 PlayOnLinux,playonlinux,Mainwindow.py
 Portal,Portal,hl2_linux
 Portal 2,Portal 2,portal2_linux
+Portal Stories Mel,Portal Stories Mel,portal2_linux
 Pushbullet Indicator,extras-pushbullet-indicator,Pushbullet-indicator
 Pycharm Community Edition,pycharm,jetbrains-pycharm-ce
 SFLphone,sflphone,Sflphone-client-gnome
