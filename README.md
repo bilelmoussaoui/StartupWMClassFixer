@@ -36,9 +36,6 @@ You can use
 ### Why using `sudo` ?
 Almost all the application desktop files are stored in `/usr/share/applications` that's why we need root permissions to modify those files.
 
-### Why Wine applications are not supported? 
-Wine applications have two `WM_CLASS` values. The default one and `wine`. Which makes it impossible to change the icon as `wine` icon will always be used instead of the default one.
-
 ### How the script works? 
 The script will modify the desktop file of supported applications ([list of supported applications](https://github.com/bil-elmoussaoui/StartupWMClassFixer/blob/master/database.csv)) and add/modify `StartupWMClass` key. 
 
