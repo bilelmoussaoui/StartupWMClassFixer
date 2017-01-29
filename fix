@@ -8,10 +8,13 @@ desktop_dir="$(sudo -u ${SUDO_USER:-$USER} xdg-user-dir DESKTOP)/"
 
 applications_location=("/usr/share/applications/"
           "/usr/share/applications/kde4/"
+          "/usr/share/applications/wine/"
           "/usr/local/share/applications/"
           "/usr/local/share/applications/kde4/"
+          "/usr/local/share/applications/wine/"
           "/home/${SUDO_USER:-$USER}/.local/share/applications/"
           "/home/${SUDO_USER:-$USER}/.local/share/applications/kde4/"
+          "/home/${SUDO_USER:-$USER}/.local/share/applications/wine/"
           $desktop_dir)
 
 backup_ignore=( $desktop_dir )
