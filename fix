@@ -58,12 +58,20 @@ fi
             if [[ ! -f "$backup_file" && ! $app_location =~ $backup_ignore ]]; then
               cp "$desktop_file" "$backup_file"
             fi
-            old_startup=$(grep -Pq "^StartupWMClass\s*=*" "$desktop_file"  | sed "s/StartupWMClass.*=//")
-            if [ -z "$old_startup" ]; then
-              echo "StartupWMClass=$startupwmclass" >> "$desktop_file"
-            else
-              sed -i -- "s#$old_startup#$startupwmclass#g" "$desktop_file"
-            fi
+            old_startup=$(grep "^StartupWMClass\s*=*" "$desktop_file"  | sed "s/StartupWMClass.*=//" | uniq)
+            while read -r startup; do
+              if [ -z "$startup" ]; then
+                line_number=$(grep -n "^Exec\s*=*" "$desktop_file" |cut -f1 -d:)
+                k=0
+                while read -r i; do
+                  value=$((i+k))
+                  sed -i "${value}i\StartupWMClass=$startupwmclass" "$desktop_file"
+                  k=$((k+1))
+                done <<< "$line_number"
+              else
+                sed -i "s#StartupWMClass\s*=\s*$startup#StartupWMClass=$startupwmclass#g" "$desktop_file"
+              fi
+            done <<< "$old_startup"
             echo "Fixed : $name"
           fi
         fi
