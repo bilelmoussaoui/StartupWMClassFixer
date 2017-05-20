@@ -1,68 +1,68 @@
-Application Name,Desktop file name,StartupWMClass
-0 A.D.,0ad,pyrogenesis
-Android SDK Manager,android-sdk,Android SDK Manager
-Android Studio,android-studio,jetbrains-studio
-Arduino IDE,arduino,processing-app-Base
-Atom,atom,atom
-BADLAND Game of the Year Edition,BADLAND Game of the Year Edition,badland
-BOINC Manager,boinc,Boincmgr
-CMake,CMake,CMakeSetup
-Copy,copy,CopyAgent
-Counter-Strike: Global Offensive,Counter-Strike Global Offensive,csgo_linux64
-Don't Starve,Don't Starve,dontstarve_steam
-Double Action: Boogaloo,Double Action Boogaloo,hl2_linux
-Etcher,Etcher,etcher
-f.lux,fluxgui,Fluxapp.py
-FoxitReader,FoxitReader,FoxitReader
-Geogebra,geogebra,org-geogebra-desktop-GeoGebra3D
-Genymotion,genymobile-genymotion,Genymotion
-Genymotion Player,genymotion-player,Genymotion Player
-GitKraken,GitKraken,GitKraken
-GNU Octave,www.octave.org-octave,Octave-gui
-Google Chrome (beta),google-chrome-beta,Google-chrome-beta
-Google Chrome (stable),google-chrome,Google-chrome-stable
-Google Chrome (unstable),google-chrome-unstable,Google-chrome-unstable
-Half-Life,Half-Life,hl_linux
-Half-Life Blue Shift,Half-Life Blue Shift,hl_linux
-Half-Life Deathmatch Source,Half-Life Deathmatch Source,hl_linux
-Half-Life Opposing Force,Half-Life Opposing Force,hl_linux
-Half-Life Source,Half-Life Source,hl_linux
-Half-Life 2,Half-Life 2,hl2_linux
-Half-Life 2 Deathmatch,Half-Life 2 Deathmatch,hl2_linux
-Half-Life 2 Episode One,Half-Life 2 Episode One,hl2_linux
-Half-Life 2 Episode Two,Half-Life 2 Episode Two,hl2_linux
-Half-Life 2 Lost Coast,Half-Life 2 Lost Coast,hl2_linux
-Heimdall Frontend,heimdall,heimdall-frontend
-IcedTea-Web Control Panel,itweb-settings,net-sourceforge-jnlp-controlpanel-CommandLine
-Insync,insync,Insync.py
-Intellij IDEA Community Edition,intellij-idea-community,jetbrains-idea-ce
-Kdenlive,org.kde.kdenlive,kdenlive
-Minecraft,minecraft,net-minecraft-bootstrap-Bootstrap
-League of Legends,playonlinux-League of Legends,LoLPatcherUx.exe
-Life Is Strange,Life Is Strange,LifeIsStrange
-Limbo,LIMBO,limbo
-Okular,okular,Okular
-Outlast,Outlast,OLGame.x86_64
-PlayOnLinux,PlayOnLinux,Mainwindow.py
-PlayOnLinux,playonlinux,Mainwindow.py
-Portal,Portal,hl2_linux
-Portal 2,Portal 2,portal2_linux
-Portal Stories Mel,Portal Stories Mel,portal2_linux
-Pushbullet Indicator,extras-pushbullet-indicator,Pushbullet-indicator
-Pycharm Community Edition,pycharm,jetbrains-pycharm-ce
-SFLphone,sflphone,Sflphone-client-gnome
-Sid Meier's Civilization V,Sid Meier's Civilization V,Civ5XP
-Sublime Text 3,sublime-text-3,Subl
-Super Hexagon,Super Hexagon,superhexagon.x86_64
-SVG Cleaner,svgcleaner,Svgcleaner-gui
-Team Fortress Classic,Team Fortress Classic,hl_linux
-Team Fortress 2,Team Fortress 2,hl2_linux
-TeamViewer,com.teamviewer.TeamViewer,TeamViewer
-Telegram,telegram,TelegramDesktop
-Telegram,telegramdesktop,TelegramDesktop
-Telegram,telegram-desktop,TelegramDesktop
-Terminator,terminator,terminator
-The Stanley Parable,The Stanley Parable,stanley_linux
-Vivaldi (Beta),vivaldi,vivaldi-preview
-WebTorrent,webtorrent-desktop,WebTorrent
-Zotero,zotero,Zotero
+Application Name, Desktop file name, StartupWMClass
+0 A.D., 0ad, pyrogenesis
+Android SDK Manager, android-sdk, Android SDK Manager
+Android Studio, android-studio, jetbrains-studio
+Arduino IDE, arduino, processing-app-Base
+Atom, atom, atom
+BADLAND Game of the Year Edition, BADLAND Game of the Year Edition, badland
+BOINC Manager, boinc, Boincmgr
+CMake, CMake, CMakeSetup
+Copy, copy, CopyAgent
+Counter-Strike: Global Offensive, Counter-Strike Global Offensive, csgo_linux64
+Don't Starve, Don't Starve, dontstarve_steam
+Double Action: Boogaloo, Double Action Boogaloo, hl2_linux
+Etcher, Etcher, etcher
+f.lux, fluxgui, Fluxapp.py
+FoxitReader, FoxitReader, FoxitReader
+Geogebra, geogebra, org-geogebra-desktop-GeoGebra3D
+Genymotion, genymobile-genymotion, Genymotion
+Genymotion Player, genymotion-player, Genymotion Player
+GitKraken, GitKraken, GitKraken
+GNU Octave, www.octave.org-octave, Octave-gui
+Google Chrome (beta), google-chrome-beta, Google-chrome-beta
+Google Chrome (stable), google-chrome, Google-chrome-stable
+Google Chrome (unstable), google-chrome-unstable, Google-chrome-unstable
+Half-Life, Half-Life, hl_linux
+Half-Life Blue Shift, Half-Life Blue Shift, hl_linux
+Half-Life Deathmatch Source, Half-Life Deathmatch Source, hl_linux
+Half-Life Opposing Force, Half-Life Opposing Force, hl_linux
+Half-Life Source, Half-Life Source, hl_linux
+Half-Life 2, Half-Life 2, hl2_linux
+Half-Life 2 Deathmatch, Half-Life 2 Deathmatch, hl2_linux
+Half-Life 2 Episode One, Half-Life 2 Episode One, hl2_linux
+Half-Life 2 Episode Two, Half-Life 2 Episode Two, hl2_linux
+Half-Life 2 Lost Coast, Half-Life 2 Lost Coast, hl2_linux
+Heimdall Frontend, heimdall, heimdall-frontend
+IcedTea-Web Control Panel, itweb-settings, net-sourceforge-jnlp-controlpanel-CommandLine
+Insync, insync, Insync.py
+Intellij IDEA Community Edition, intellij-idea-community, jetbrains-idea-ce
+Kdenlive, org.kde.kdenlive, kdenlive
+Minecraft, minecraft, net-minecraft-bootstrap-Bootstrap
+League of Legends, playonlinux-League of Legends, LoLPatcherUx.exe
+Life Is Strange, Life Is Strange, LifeIsStrange
+Limbo, LIMBO, limbo
+Okular, okular, Okular
+Outlast, Outlast, OLGame.x86_64
+PlayOnLinux, PlayOnLinux, Mainwindow.py
+PlayOnLinux, playonlinux, Mainwindow.py
+Portal, Portal, hl2_linux
+Portal 2, Portal 2, portal2_linux
+Portal Stories Mel, Portal Stories Mel, portal2_linux
+Pushbullet Indicator, extras-pushbullet-indicator, Pushbullet-indicator
+Pycharm Community Edition, pycharm, jetbrains-pycharm-ce
+SFLphone, sflphone, Sflphone-client-gnome
+Sid Meier's Civilization V, Sid Meier's Civilization V, Civ5XP
+Sublime Text 3, sublime-text-3, Subl
+Super Hexagon, Super Hexagon, superhexagon.x86_64
+SVG Cleaner, svgcleaner, Svgcleaner-gui
+Team Fortress Classic, Team Fortress Classic, hl_linux
+Team Fortress 2, Team Fortress 2, hl2_linux
+TeamViewer, com.teamviewer.TeamViewer, TeamViewer
+Telegram, telegram, TelegramDesktop
+Telegram, telegramdesktop, TelegramDesktop
+Telegram, telegram-desktop, TelegramDesktop
+Terminator, terminator, terminator
+The Stanley Parable, The Stanley Parable, stanley_linux
+Vivaldi (Beta), vivaldi, vivaldi-preview
+WebTorrent, webtorrent-desktop, WebTorrent
+Zotero, zotero, Zotero

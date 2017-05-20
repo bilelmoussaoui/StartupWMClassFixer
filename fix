@@ -4,22 +4,25 @@
 # Version : 0.1
 # Licence : The script is released under GPL
 
-desktop_dir="$(sudo -u ${SUDO_USER:-$USER} xdg-user-dir DESKTOP)/"
+USERNAME=${SUDO_USER:-$USER}
+DATABASE_FILE="database.csv"
+# Desktop directory path
+desktop_dir="$(sudo -u ${USERNAME} xdg-user-dir DESKTOP)/"
 
+# Path's of .destkop files
 applications_location=("/usr/share/applications/"
           "/usr/share/applications/kde4/"
           "/usr/share/applications/wine/"
           "/usr/local/share/applications/"
           "/usr/local/share/applications/kde4/"
           "/usr/local/share/applications/wine/"
-          "/home/${SUDO_USER:-$USER}/.local/share/applications/"
-          "/home/${SUDO_USER:-$USER}/.local/share/applications/kde4/"
-          "/home/${SUDO_USER:-$USER}/.local/share/applications/wine/"
+          "/home/${USERNAME}/.local/share/applications/"
+          "/home/${USERNAME}/.local/share/applications/kde4/"
+          "/home/${USERNAME}/.local/share/applications/wine/"
           $desktop_dir)
 
+# List of paths to not be saved as a copy (back up)
 backup_ignore=( $desktop_dir )
-
-IFS=,
 
 #The script needs root privileges
 if [ "$(id -u)" != "0" ]; then
@@ -39,39 +42,39 @@ else
   esac
 fi
 
-if [[ "$@" == "--force-update" || "$@" == "-u" || ! -f "database.csv" ]]; then
+if [[ "$@" == "--force-update" || "$@" == "-u" || ! -f $DATABASE_FILE ]]; then
   echo "Updating the database file.."
-  wget https://raw.githubusercontent.com/bil-elmoussaoui/StartupWMClassFixer/master/database.csv -O database.csv
-  chown -R ${SUDO_USER:-$USER} ./database.csv
+  wget "https://raw.githubusercontent.com/bil-elmoussaoui/StartupWMClassFixer/master/${DATABASE_FILE}" -O $DATABASE_FILE
+  chown -R ${USERNAME} "./${DATABASE_FILE}"
 fi
 
 {
   read;
-  while read -r name launcher startupwmclass; do
+  while IFS=', ' read -r name launcher startup_wmclass; do
     for app_location in "${applications_location[@]}"
     do
       desktop_file="$app_location$launcher.desktop"
       backup_file="$desktop_file.bak"
       if [ "$mode" == "apply" ]; then
         if [ -f "$desktop_file" ]; then
-          if ! grep -Pq "StartupWMClass\s*=\s*$startupwmclass$" "$desktop_file"; then
+          if ! grep -Pq "StartupWMClass\s*=\s*$startup_wmclass$" "$desktop_file"; then
             if [[ ! -f "$backup_file" && ! $app_location =~ $backup_ignore ]]; then
               cp "$desktop_file" "$backup_file"
             fi
-            old_startup=$(grep "^StartupWMClass\s*=*" "$desktop_file"  | sed "s/StartupWMClass.*=//" | uniq)
-            while read -r startup; do
-              if [ -z "$startup" ]; then
+            current_wmclass=$(grep "^StartupWMClass\s*=*" "$desktop_file"  | sed "s/StartupWMClass.*=//" | uniq)
+            while read -r wm_class; do
+              if [ -z "$wm_class" ]; then
                 line_number=$(grep -n "^Exec\s*=*" "$desktop_file" |cut -f1 -d:)
                 k=0
                 while read -r i; do
-                  value=$((i+k))
-                  sed -i "${value}i\StartupWMClass=$startupwmclass" "$desktop_file"
+                  j=$((i+k))
+                  sed -i "${j}i\StartupWMClass=$startup_wmclass" "$desktop_file"
                   k=$((k+1))
                 done <<< "$line_number"
               else
-                sed -i "s#StartupWMClass\s*=\s*$startup#StartupWMClass=$startupwmclass#g" "$desktop_file"
+                sed -i "s#StartupWMClass\s*=\s*$wm_class#StartupWMClass=$startup_wmclass#g" "$desktop_file"
               fi
-            done <<< "$old_startup"
+            done <<< "$current_wmclass"
             echo "Fixed : $name"
           fi
         fi
@@ -83,4 +86,4 @@ fi
       fi
     done
   done
-}< "database.csv"
+}< "${DATABASE_FILE}"
