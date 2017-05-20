@@ -6,6 +6,7 @@
 
 USERNAME=${SUDO_USER:-$USER}
 DATABASE_FILE="database.csv"
+DATABASE_PATH="$(dirname $(readlink -f $0))/${DATABASE_FILE}"
 # Desktop directory path
 desktop_dir="$(sudo -u ${USERNAME} xdg-user-dir DESKTOP)/"
 
@@ -42,10 +43,10 @@ else
   esac
 fi
 
-if [[ "$@" == "--force-update" || "$@" == "-u" || ! -f $DATABASE_FILE ]]; then
+if [[ "$@" == "--force-update" || "$@" == "-u" || ! -f $DATABASE_PATH ]]; then
   echo "Updating the database file.."
-  wget "https://raw.githubusercontent.com/bil-elmoussaoui/StartupWMClassFixer/master/${DATABASE_FILE}" -O $DATABASE_FILE
-  chown -R ${USERNAME} "./${DATABASE_FILE}"
+  wget "https://raw.githubusercontent.com/bil-elmoussaoui/StartupWMClassFixer/master/${DATABASE_FILE}" -O $DATABASE_PATH
+  chown -R ${USERNAME} "./${DATABASE_PATH}"
 fi
 
 {
@@ -86,4 +87,4 @@ fi
       fi
     done
   done
-}< "${DATABASE_FILE}"
+}< "${DATABASE_PATH}"
