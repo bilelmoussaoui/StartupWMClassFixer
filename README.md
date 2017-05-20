@@ -1,38 +1,41 @@
 # StartupWMClassFixer
 Will help you fix unrecognized, ugly or double icons in Linux.
 
-## How to use
-1. Download the [zip folder](https://github.com/bil-elmoussaoui/StartupWMClassFixer/archive/master.zip) or clone the repository
-  
-  ```bash
-  git clone https://github.com/bil-elmoussaoui/StartupWMClassFixer.git
-  ```
-2. Open the script using 
-
-  ```bash
-  sudo ./fix
-  ```
-  or 
-
-  ```bash
-  sudo ./fix --apply 
-  ```
-  
-#### How to revert
-Open the terminal and use
-```bash
-  sudo ./fix --revert
-```
-
-#### How to use latest version of database file
-You can use 
-```bash
- sudo ./fix --force-update
-```
-
 ## Dependencies
 - `wget`
 
+## How to install
+#### Arch Linux
+```bash
+yaourt -S startupwmclassfixer
+```
+#### Manual installation
+Download the [zip folder](https://github.com/bil-elmoussaoui/StartupWMClassFixer/archive/master.zip) or clone the repository
+  ```bash
+git clone https://github.com/bil-elmoussaoui/StartupWMClassFixer.git
+```
+
+## How to use
+Open the script using 
+```bash
+sudo ./fix
+```
+
+Or using this if you've installed the script from a package 
+```bash
+sudo StartupWMClassFixer
+```
+  
+### Arguments
+#### How to revert
+You can revert your modifications using `--revert` argument.
+```bash
+  sudo ./fix --revert
+```
+#### How to use latest version of database file
+```bash
+ sudo ./fix --force-update
+```
 
 ## FAQ
 
