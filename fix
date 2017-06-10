@@ -46,7 +46,7 @@ fi
 if [[ "$@" == "--force-update" || "$@" == "-u" || ! -f $DATABASE_PATH ]]; then
   echo "Updating the database file.."
   wget "https://raw.githubusercontent.com/bil-elmoussaoui/StartupWMClassFixer/master/${DATABASE_FILE}" -O $DATABASE_PATH
-  chown -R ${USERNAME} "./${DATABASE_PATH}"
+  chown -R ${USERNAME} "${DATABASE_PATH}"
 fi
 
 {
