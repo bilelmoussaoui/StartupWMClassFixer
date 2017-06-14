@@ -1,6 +1,8 @@
 # StartupWMClassFixer
 Will help you fix unrecognized, ugly or double icons in Linux.
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/BilalELMoussaoui)
+
 ## Dependencies
 - `wget`
 
