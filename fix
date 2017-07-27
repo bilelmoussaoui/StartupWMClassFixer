@@ -2,7 +2,7 @@
 
 # Author : Bilal Elmoussaoui, Andreas Angerer
 # Version : 0.1
-# Licence : The script is released under GPL
+# Licence : GPL-2.0
 VERSION="0.2"
 USERNAME=${SUDO_USER:-$USER}
 DATABASE_FILE="database.csv"
@@ -26,7 +26,9 @@ APPS_LOCATIONS=(
 )
 
 # List of paths to not be saved as a copy (back up)
-BACKUP_IGNORE=( $DESKTOP_DIR )
+BACKUP_IGNORE=(
+  $DESKTOP_DIR
+)
 
 # The script needs root privileges
 if [ "$(id -u)" != "0" ]; then
@@ -88,7 +90,7 @@ fi
             cp "$desktop_file" "$backup_file"
           fi
           # Get the current StartupWMClass
-          current_wmclass=$(grep "^StartupWMClass\s*=*" "$desktop_file"  | sed "s/StartupWMClass.*=//" | uniq)
+          current_wmclass=$(grep "^StartupWMClass\s*=*" "$desktop_file" | sed "s/StartupWMClass.*=//" | uniq)
           while read -r wm_class; do
             # If the wm_class is set to none
             if [ -z "$wm_class" ]; then
@@ -104,7 +106,7 @@ fi
           echo "Fixed: $name"
         fi
       # Revert mode
-      elif [[ "$mode" == "revert" &&  -f "$desktop_file" && -f "$backup_file" && ! $app_location =~ $BACKUP_IGNORE ]]; then
+      elif [[ "$mode" == "revert" && -f "$desktop_file" && -f "$backup_file" && ! $app_location =~ $BACKUP_IGNORE ]]; then
         mv "$backup_file" "$desktop_file"
         echo "Reverted: $name"
       fi
