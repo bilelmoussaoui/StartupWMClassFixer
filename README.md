@@ -66,15 +66,13 @@ The script will modify the desktop file of supported applications ([list of supp
 
 For more informations about `StartupWMClass` see [Recognized desktop entry keys](http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s05.html).
 
-#### How to contribute
+### How to contribute
 
 1. Open the application
 2. Open the terminal and type `xprop WM_CLASS`
 3. The mouse cursor will change, click on the application window and copy the `WM_CLASS(STRING)` value
 4. Clone the repository and modify the database file following this
-
-  ```
-    Application Name, Desktop file name, WM_CLASS
-  ```
-
+```
+  Application Name, Desktop file name, WM_CLASS
+```
 5. Create a pull request
