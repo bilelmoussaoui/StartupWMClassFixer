@@ -52,7 +52,7 @@ else
                 "\rFixes ugly or double icons on Linux.\n\n" \
                 "\rCurrently supported options:\n" \
                 "\r  -a, --apply \t\t Apply changes.\n" \
-                "\r  -u, --force-update \t Update the database to the latest version.\n" \
+                "\r  -u, --update \t Update the database to the latest version.\n" \
                 "\r  -r, --revert \t\t Reverts any changes made.\n" \
                 "\r  -h, --help \t\t Displays this help menu.\n" \
                 "\r  -v, --version \t Displays program version.\n"
