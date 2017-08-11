@@ -3,113 +3,126 @@
 # Author : Bilal Elmoussaoui, Andreas Angerer
 # Version : 0.1
 # Licence : GPL-2.0
+# Website: https://github.com/bil-elmoussaoui/StartupWMClassFixer
+
 VERSION="0.2"
 USERNAME=${SUDO_USER:-$USER}
 DATABASE_FILE="database.csv"
 BACKUP_EXT=".bak"
+DESKTOP_EXT=".desktop"
+DATABASE_SEP=", "
 DATABASE_PATH="$(dirname $(readlink -f $0))/${DATABASE_FILE}"
 # Desktop directory path
 DESKTOP_DIR="$(sudo -u ${USERNAME} xdg-user-dir DESKTOP)/"
-
+# Actions that requires ROOT priv
+ROOT_MODE=( "apply" "revert" "update")
 # Path's of .destkop files
 APPS_LOCATIONS=(
-  "/usr/share/applications/"
-  "/usr/share/applications/kde4/"
-  "/usr/share/applications/wine/"
-  "/usr/local/share/applications/"
-  "/usr/local/share/applications/kde4/"
-  "/usr/local/share/applications/wine/"
-  "/home/${USERNAME}/.local/share/applications/"
-  "/home/${USERNAME}/.local/share/applications/kde4/"
-  "/home/${USERNAME}/.local/share/applications/wine/"
-  $DESKTOP_DIR
+    "/usr/share/applications/"
+    "/usr/share/applications/kde4/"
+    "/usr/share/applications/wine/"
+    "/usr/local/share/applications/"
+    "/usr/local/share/applications/kde4/"
+    "/usr/local/share/applications/wine/"
+    "/home/${USERNAME}/.local/share/applications/"
+    "/home/${USERNAME}/.local/share/applications/kde4/"
+    "/home/${USERNAME}/.local/share/applications/wine/"
+    $DESKTOP_DIR
 )
 
 # List of paths to not be saved as a copy (back up)
 BACKUP_IGNORE=(
-  $DESKTOP_DIR
+    $DESKTOP_DIR
 )
-
-# The script needs root privileges
-if [ "$(id -u)" != "0" ]; then
-  echo "You need to have root privileges to run the script."
-  echo "Please try again,this time using 'sudo'. Exiting."
-  exit 1
-fi
 
 # Define the execution mode : apply/revert
 if [ -z "$1" ]; then
-  mode="apply"
+    mode="apply"
 else
-  case $@ in
-    -r|--revert)
-      mode="revert";;
-    -a|--apply)
-      mode="apply";;
-    -h|--help)
-      echo -e \
-        "Usage: ./$(basename -- $0) [OPTION]\n" \
-        "\rFixes ugly or double icons on Linux.\n\n" \
-        "\rCurrently supported options:\n" \
-        "\r  -a, --apply \t\t Apply changes.\n" \
-        "\r  -u, --force-update \t Update the database to the latest version.\n" \
-        "\r  -r, --revert \t\t Reverts any changes made.\n" \
-        "\r  -h, --help \t\t Displays this help menu.\n" \
-        "\r  -v, --version \t Displays program version.\n"
-      exit 0 ;;
-    -v|--version)
-      echo -e "StartupWMClassFixer $VERSION\n"
-      exit 0 ;;
-    *)
-      echo -e "$(basename -- $0): invalid option '$1'"
-      echo -e "Try './$(basename -- $0) --help' for more information."
-      exit 0 ;;
-  esac
+    case $@ in
+        -r|--revert)
+            mode="revert";;
+        -a|--apply)
+            mode="apply";;
+        -u|--update)
+            mode="update";;
+        -h|--help)
+            echo -e \
+                "Usage: $(basename -- $0) [OPTION]\n" \
+                "\rFixes ugly or double icons on Linux.\n\n" \
+                "\rCurrently supported options:\n" \
+                "\r  -a, --apply \t\t Apply changes.\n" \
+                "\r  -u, --force-update \t Update the database to the latest version.\n" \
+                "\r  -r, --revert \t\t Reverts any changes made.\n" \
+                "\r  -h, --help \t\t Displays this help menu.\n" \
+                "\r  -v, --version \t Displays program version.\n"
+            exit 0 ;;
+        -v|--version)
+            echo -e "StartupWMClassFixer $VERSION\n"
+            exit 0 ;;
+        *)
+            echo -e "$(basename -- $0): invalid option '$1'"
+            echo -e "Try '$(basename -- $0) --help' for more information."
+            exit 0 ;;
+    esac
+fi
+
+# The script needs root privileges
+if [[ "$(id -u)" != "0" && $mode =~ $ROOT_MODE ]]; then
+    echo "You need to have root privileges to run the script."
+    echo "Please try again,this time using 'sudo'. Exiting."
+    exit 1
 fi
 
 # Download the latest version of the database file
-if [[ "$@" == "--force-update" || "$@" == "-u" || ! -f $DATABASE_PATH ]]; then
-  echo "Updating the database file.."
-  wget "https://raw.githubusercontent.com/bil-elmoussaoui/StartupWMClassFixer/master/${DATABASE_FILE}" -O $DATABASE_PATH
-  chown -R ${USERNAME} "${DATABASE_PATH}"
+if [[ $mode == "update" || ! -f $DATABASE_PATH ]]; then
+    echo "Updating the database file.."
+    wget -q "https://raw.githubusercontent.com/bil-elmoussaoui/StartupWMClassFixer/master/${DATABASE_FILE}" -O $DATABASE_PATH
+    chown -R ${USERNAME} "${DATABASE_PATH}"
 fi
 
 {
-  read;
-  while IFS=', ' read -r name launcher startup_wmclass; do
-    for app_location in "${APPS_LOCATIONS[@]}"
+    read;
+    while IFS=$DATABASE_SEP read -r name launcher startup_wmclass;
     do
-      desktop_file="$app_location$launcher.desktop"
-      backup_file="$desktop_file$BACKUP_EXT"
-      # Apply mode
-      if [[ "$mode" == "apply" && -f "$desktop_file" ]]; then
-        # Only if the desktop file has a different StartupWMClass
-        if ! grep -Pq "StartupWMClass\s*=\s*$startup_wmclass$" "$desktop_file"; then
-          # Backup the current desktop file
-          if [[ ! -f "$backup_file" && ! $app_location =~ $backup_ignore ]]; then
-            cp "$desktop_file" "$backup_file"
-          fi
-          # Get the current StartupWMClass
-          current_wmclass=$(grep "^StartupWMClass\s*=*" "$desktop_file" | sed "s/StartupWMClass.*=//" | uniq)
-          while read -r wm_class; do
-            # If the wm_class is set to none
-            if [ -z "$wm_class" ]; then
-              # The line number of the current Exec (to add StartupWMClass just after)
-              i=$(grep -n -m 1 "^Exec\s*=*" "$desktop_file" |cut -f1 -d:)
-              j=$((i+1))
-              sed -i "${j}i\StartupWMClass=$startup_wmclass" "$desktop_file"
-            else
-              # Replace the current WMClass with the new one
-              sed -i "s#StartupWMClass\s*=\s*$wm_class#StartupWMClass=$startup_wmclass#g" "$desktop_file"
+        for app_location in "${APPS_LOCATIONS[@]}"
+        do
+            desktop_file="${app_location}${launcher}${DESKTOP_EXT}"
+            backup_file="${desktop_file}${BACKUP_EXT}"
+            if [ ! -f $desktop_file ]; then
+                continue
             fi
-          done <<< "$current_wmclass"
-          echo "Fixed: $name"
-        fi
-      # Revert mode
-      elif [[ "$mode" == "revert" && -f "$desktop_file" && -f "$backup_file" && ! $app_location =~ $BACKUP_IGNORE ]]; then
-        mv "$backup_file" "$desktop_file"
-        echo "Reverted: $name"
-      fi
+            case $mode in
+                "apply")
+                    # Only if the desktop file has a different StartupWMClass
+                    if ! grep -Pq "StartupWMClass\s*=\s*$startup_wmclass$" $desktop_file; then
+                        # Backup the current desktop file
+                        if [[ ! -f $backup_file && ! $app_location =~ $BACKUP_IGNORE ]]; then
+                            cp $desktop_file $backup_file
+                        fi
+                        while read -r wm_class;
+                        do
+                            # If the wm_class is set to none
+                            if [ -z $wm_class ]; then
+                                # The line number of the current Exec (to add StartupWMClass just after)
+                                i=$(grep -n -m 1 "^Exec\s*=*" "$desktop_file" | cut -f1 -d:)
+                                j=$((i+1))
+                                sed -i "${j}i\StartupWMClass=$startup_wmclass" $desktop_file
+                            else
+                                # Replace the current WMClass with the new one
+                                sed -i "s#StartupWMClass\s*=\s*$wm_class#StartupWMClass=$startup_wmclass#g" $desktop_file
+                            fi
+                        done <<< $(grep "^StartupWMClass\s*=*" $desktop_file | sed "s/StartupWMClass.*=//" | uniq)
+                        echo "Fixed: $name"
+                    fi
+                    ;;
+                "revert")
+                    if [[ -f $backup_file && ! $app_location =~ $BACKUP_IGNORE ]]; then
+                        mv $backup_file $desktop_file
+                        echo "Reverted: $name"
+                    fi
+                    ;;
+                esac
+        done
     done
-  done
-}< "${DATABASE_PATH}"
+}< $DATABASE_PATH

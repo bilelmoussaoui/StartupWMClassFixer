@@ -51,7 +51,7 @@ You can revert your modifications using `--revert` argument.
 #### How to use latest version of database file
 
 ```bash
- sudo ./fix --force-update
+ sudo ./fix --update
 ```
 
 ## FAQ
