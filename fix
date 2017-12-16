@@ -88,10 +88,12 @@ fi
         for app_location in "${APPS_LOCATIONS[@]}"
         do
             desktop_file="${app_location}${launcher}${DESKTOP_EXT}"
-            backup_file="${desktop_file}${BACKUP_EXT}"
             if [ ! -f $desktop_file ]; then
                 continue
+            else
+                desktop_file=`realpath ${desktop_file}`
             fi
+            backup_file="${desktop_file}${BACKUP_EXT}"
             case $mode in
                 "apply")
                     # Only if the desktop file has a different StartupWMClass
