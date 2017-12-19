@@ -1,9 +1,11 @@
 Application Name, Desktop file name, StartupWMClass
 0.A.D., 0ad, pyrogenesis
+Amarok, amarok, Amarok
 Android SDK Manager, android-sdk, Android SDK Manager
 Android Studio, android-studio, jetbrains-studio
 Arduino IDE, arduino, processing-app-Base
 Atom, atom, atom
+Vuze, azureus, Vuze
 BADLAND Game of the Year Edition, BADLAND Game of the Year Edition, badland
 BOINC Manager, boinc, Boincmgr
 CMake, CMake, CMakeSetup
@@ -25,6 +27,7 @@ Goodvibes, com.elboulangero.Goodvibes, goodvibes
 Google Chrome (beta), google-chrome-beta, Google-chrome-beta
 Google Chrome (stable), google-chrome, Google-chrome-stable
 Google Chrome (unstable), google-chrome-unstable, Google-chrome-unstable
+KRDC, org.kde.krdc, krdc
 Half-Life, Half-Life, hl_linux
 Half-Life Blue Shift, Half-Life Blue Shift, hl_linux
 Half-Life Deathmatch Source, Half-Life Deathmatch Source, hl_linux
