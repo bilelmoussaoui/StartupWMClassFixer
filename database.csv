@@ -1,5 +1,6 @@
 Application Name, Desktop file name, StartupWMClass
 0.A.D., 0ad, pyrogenesis
+Amarok, amarok, Amarok
 Android SDK Manager, android-sdk, Android SDK Manager
 Android Studio, android-studio, jetbrains-studio
 Arduino IDE, arduino, processing-app-Base
@@ -41,6 +42,7 @@ IcedTea-Web Control Panel, itweb-settings, net-sourceforge-jnlp-controlpanel-Com
 Insync, insync, Insync.py
 Intellij IDEA Community Edition, intellij-idea-community, jetbrains-idea-ce
 Kdenlive, org.kde.kdenlive, kdenlive
+KRDC, org.kde.krdc, krdc
 Minecraft, minecraft, net-minecraft-bootstrap-Bootstrap
 League of Legends, playonlinux-League of Legends, LoLPatcherUx.exe
 Life Is Strange, Life Is Strange, LifeIsStrange
@@ -70,5 +72,6 @@ The Stanley Parable, The Stanley Parable, stanley_linux
 Viber, viber, ViberPC
 Visual Studio Code, visual-studio-code, Code
 Vivaldi (Beta), vivaldi, vivaldi-preview
+Vuze, azureus, Vuze
 WebTorrent, webtorrent-desktop, WebTorrent
 Zotero, zotero, Zotero
