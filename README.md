@@ -1,24 +1,25 @@
 # StartupWMClassFixer
 
-Will help you fix unrecognized, ugly or double icons in Linux.
+It will help you to fix unrecognized, ugly or double icons in Linux.
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/BilalELMoussaoui)
 
 ## Dependencies
 
+- `git`
 - `wget`
 
 ## How to install
 
-### Arch Linux
+### Arch Linux and Arch-derived distributions
 
 ```bash
-yaourt -S startupwmclassfixer
+yay -S startupwmclassfixer
 ```
 
 ### Manual installation
 
-Download the [zip folder](https://github.com/bil-elmoussaoui/StartupWMClassFixer/archive/master.zip) or clone the repository
+Download the [zipped file](https://github.com/bil-elmoussaoui/StartupWMClassFixer/archive/master.zip) or clone the repository
 
 ```bash
 git clone https://github.com/bil-elmoussaoui/StartupWMClassFixer.git
