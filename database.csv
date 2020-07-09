@@ -1,5 +1,7 @@
 Application Name, Desktop file name, StartupWMClass
 0.A.D., 0ad, pyrogenesis
+Adventures of Shuggy, Adventures of Shuggy, Shuggy.bin.x86_64
+Age of Empires II (2013), Age of Empires II (2013), aok hd.exe
 Age of Empires II: Definitive Edition, Age of Empires II Definitive Edition, aoe2de_s.exe
 Age of Mythology: Extended Edition, Age of Mythology Extended Edition, aomx.exe
 Amarok, amarok, Amarok
@@ -11,6 +13,7 @@ Arduino IDE, arduino, processing-app-Base
 Assassin's Creed, Assassin's Creed, assassinscreed_dx10.exe
 Atom, atom, atom
 Awesomenauts, Awesomenauts, Awesomenauts.bin.x86
+Baba is You, Baba is You, Chowdren
 BADLAND Game of the Year Edition, BADLAND Game of the Year Edition, badland
 Bastion, Bastion, Bastion.bin.x86_64
 BattleBlock Theater, BattleBlock Theater, BattleBlockTheater
@@ -22,6 +25,7 @@ Borderlands: The Pre-Sequel, Borderlands The Pre-Sequel, BorderlandsPreSequel
 Borderlands 2, Borderlands 2, Borderlands2
 Brave, brave, brave-browser
 Broken Age, Broken Age, BrokenAge
+Clickr, Clickr, clickr.exe
 CMake, CMake, CMakeSetup
 Company of Heroes 2, Company of Heroes 2, CompanyOfHeroes2
 Copy, copy, CopyAgent
@@ -77,11 +81,13 @@ Half-Life 2 Episode One, Half-Life 2 Episode One, hl2_linux
 Half-Life 2 Episode Two, Half-Life 2 Episode Two, hl2_linux
 Half-Life 2 Lost Coast, Half-Life 2 Lost Coast, hl2_linux
 Hearts of Iron IV, Hearts of Iron IV, hoi4
+Heave Ho, Heave Ho, heaveho.exe
 Heimdall Frontend, heimdall, heimdall-frontend
 Hollow Knight, Hollow Knight, hollow_knight.x86_64
 Hotline Miami 2, Hotline Miami 2, HotlineMiami2
 HP Device Manager, hplip, hp-toolbox
 IcedTea-Web Control Panel, itweb-settings, net-sourceforge-jnlp-controlpanel-CommandLine
+Ichi, Ichi, ichi.exe
 Imperator: Rome, Imperator Rome, imperator
 Insurgency, Insurgency, insurgency_linux
 Insync, insync, Insync.py
@@ -126,6 +132,7 @@ Project Zomboid, Project Zomboid, Game
 Pushbullet Indicator, extras-pushbullet-indicator, Pushbullet-indicator
 Pycharm Community Edition, pycharm, jetbrains-pycharm-ce
 Qt Creator, org.qt-project.qtcreator, QtCreator
+Retro City Rampage DX, Retro City Rampage DX, retrocityrampage
 RimWorld, RimWorld, RimWorldLinux.x86_64
 Rise to Ruins, Rise to Ruins, Rise to Ruins Update 1
 Robocraft, Robocraft, Robocraft.x86_64
@@ -169,12 +176,14 @@ Trine 1, Trine 1, trine1_linux_32bit
 Viber, viber, ViberPC
 Visual Studio Code, visual-studio-code, Code
 Vivaldi (Beta), vivaldi, vivaldi-preview
+Void Bastards, Void Bastards, void bastards.exe
 Voxelized, Voxelized, voxelized.exe
 Vuze, azureus, Vuze
 VVVVVV, VVVVVV, vvvvvv.x86_64
 Waking Mars, Waking Mars, wakingmars
 War Thunder, War Thunder, dagor2
 WebTorrent, webtorrent-desktop, WebTorrent
+Wolfenstein: The Old Blood, Wolfenstein The Old Blood, wolfoldblood_x64.exe
 World of Goo, World of Goo, WorldOfGoo
 XCOM: Enemy Unknown, XCOM Enemy Unknown, XCOM: Enemy Unknown
 Zotero, zotero, Zotero
