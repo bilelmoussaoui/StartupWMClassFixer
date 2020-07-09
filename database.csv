@@ -18,8 +18,8 @@ Beat Saber, Beat Saber, beat saber.exe
 BioShock Infinite, BioShock Infinite, bioshock.i386
 Black Mesa, Black Mesa, bms_linux
 BOINC Manager, boinc, Boincmgr
-Borderlands 2, Borderlands 2, Borderlands2
 Borderlands: The Pre-Sequel, Borderlands The Pre-Sequel, BorderlandsPreSequel
+Borderlands 2, Borderlands 2, Borderlands2
 Brave, brave, brave-browser
 Broken Age, Broken Age, BrokenAge
 CMake, CMake, CMakeSetup
@@ -36,7 +36,6 @@ Divinity: Original Sin 2, Divinity Original Sin 2, supporttool.exe
 Dolphin, org.kde.dolphin, dolphin
 Don't Starve Together, Don't Starve Together, dontstarve_steam
 Don't Starve, Don't Starve, dontstarve_steam
-Don't Starve, Don't Starve, dotnstarve_steam
 DOOM, DOOM, doom64vk.exe
 Double Action: Boogaloo, Double Action Boogaloo, hl2_linux
 Duke Nukem 3D: Megaton Edition, Duke Nukem 3D Megaton Edition, duke3d
@@ -67,16 +66,16 @@ Google Chrome (unstable), google-chrome-unstable, Google-chrome-unstable
 Grand Theft Auto V, Grand Theft Auto V, gta5.exe
 Guacamelee! Gold Edition, Guacamelee Gold Edition,game-bin
 Guacamelee! Super Turbo Championship Edition, Guacamelee Super Turbo Championship Edition, steam_app_275390
-Half-Life 2 Deathmatch, Half-Life 2 Deathmatch, hl2_linux
-Half-Life 2 Episode One, Half-Life 2 Episode One, hl2_linux
-Half-Life 2 Episode Two, Half-Life 2 Episode Two, hl2_linux
-Half-Life 2 Lost Coast, Half-Life 2 Lost Coast, hl2_linux
-Half-Life 2, Half-Life 2, hl2_linux
+Half-Life, Half-Life, hl_linux
 Half-Life Blue Shift, Half-Life Blue Shift, hl_linux
 Half-Life Deathmatch Source, Half-Life Deathmatch Source, hl_linux
 Half-Life Opposing Force, Half-Life Opposing Force, hl_linux
 Half-Life Source, Half-Life Source, hl_linux
-Half-Life, Half-Life, hl_linux
+Half-Life 2, Half-Life 2, hl2_linux
+Half-Life 2 Deathmatch, Half-Life 2 Deathmatch, hl2_linux
+Half-Life 2 Episode One, Half-Life 2 Episode One, hl2_linux
+Half-Life 2 Episode Two, Half-Life 2 Episode Two, hl2_linux
+Half-Life 2 Lost Coast, Half-Life 2 Lost Coast, hl2_linux
 Hearts of Iron IV, Hearts of Iron IV, hoi4
 Heimdall Frontend, heimdall, heimdall-frontend
 Hollow Knight, Hollow Knight, hollow_knight.x86_64
@@ -98,7 +97,6 @@ Konsole, org.kde.konsole, konsole
 KRDC, org.kde.krdc, krdc
 League of Legends, playonlinux-League of Legends, LoLPatcherUx.exe
 Left 4 Dead 2, Left 4 Dead 2, Left4Dead2
-Life is Strange, Life is Strange, 319630
 Life Is Strange, Life Is Strange, LifeIsStrange
 Limbo, LIMBO, limbo
 LYNE, LYNE, LYNE.x64
@@ -134,9 +132,9 @@ Robocraft, Robocraft, Robocraft.x86_64
 Rocket League, Rocket League, rocketleague.exe
 Rust, Rust, rust
 SFLphone, sflphone, Sflphone-client-gnome
+Sid Meier's Civilization: Beyond Earth, Sid Meier's Civilization Beyond Earth, CivBE
 Sid Meier's Civilization V, Sid Meier's Civilization V, Civ5XP
 Sid Meier's Civilization VI, Sid Meier's Civilization VI, Civ6Sub
-Sid Meier's Civilization: Beyond Earth, Sid Meier's Civilization Beyond Earth, CivBE
 Spec Ops: The Line, Spec Ops The line, specops.i386
 Starbound, Starbound, starbound
 StarMade, StarMade, StarMade
@@ -147,11 +145,11 @@ Super Meat Boy, Super Meat Boy, SuperMeatBoy
 Surviving Mars, Surviving Mars, surviving mars
 SVG Cleaner, svgcleaner, Svgcleaner-gui
 System Shock 2, System Shock 2, Shock2.exe
-Team Fortress 2, Team Fortress 2, hl2_linux
 Team Fortress Classic, Team Fortress Classic, hl_linux
+Team Fortress 2, Team Fortress 2, hl2_linux
 TeamViewer, com.teamviewer.TeamViewer, TeamViewer
-Telegram, telegram-desktop, TelegramDesktop
 Telegram, telegram, TelegramDesktop
+Telegram, telegram-desktop, TelegramDesktop
 Telegram, telegramdesktop, TelegramDesktop
 Terminator, terminator, terminator
 Terraria, Terraria, Terraria.bin.x86_64
