@@ -1,27 +1,66 @@
 Application Name, Desktop file name, StartupWMClass
 0.A.D., 0ad, pyrogenesis
+Adventures of Shuggy, Adventures of Shuggy, Shuggy.bin.x86_64
+Age of Empires: Definitive Edition, Age of Empires Definitive Edition, aoede_s.exe
+Age of Empires II (2013), Age of Empires II (2013), aok hd.exe
+Age of Empires II: Definitive Edition, Age of Empires II Definitive Edition, aoe2de_s.exe
+Age of Mythology: Extended Edition, Age of Mythology Extended Edition, aomx.exe
 Amarok, amarok, Amarok
+Amnesia, Amnesia, Amnesia.bin.x86_64
+Amnesia: A Machine for Pigs, Amnesia A Machine for Pigs, AmnesiaAMFP.bin.x86_64
 Android SDK Manager, android-sdk, Android SDK Manager
 Android Studio, android-studio, jetbrains-studio
 Arduino IDE, arduino, processing-app-Base
+Assassin's Creed, Assassin's Creed, assassinscreed_dx10.exe
 Atom, atom, atom
+Awesomenauts, Awesomenauts, Awesomenauts.bin.x86
+Baba is You, Baba is You, Chowdren
 BADLAND Game of the Year Edition, BADLAND Game of the Year Edition, badland
+Bastion, Bastion, Bastion.bin.x86_64
+BattleBlock Theater, BattleBlock Theater, BattleBlockTheater
+Beat Saber, Beat Saber, beat saber.exe
+BioShock Infinite, BioShock Infinite, bioshock.i386
+Black Mesa, Black Mesa, bms_linux
 BOINC Manager, boinc, Boincmgr
+Borderlands: The Pre-Sequel, Borderlands The Pre-Sequel, BorderlandsPreSequel
+Borderlands 2, Borderlands 2, Borderlands2
 Brave, brave, brave-browser
+Broken Age, Broken Age, BrokenAge
+Clickr, Clickr, clickr.exe
 CMake, CMake, CMakeSetup
+Company of Heroes 2, Company of Heroes 2, CompanyOfHeroes2
 Copy, copy, CopyAgent
+Costume Quest, Costume Quest, Cq.bin.x86
 Counter-Strike: Global Offensive, Counter-Strike Global Offensive, csgo_linux64
+Crusader Kings 2, Crusader Kings 2, ck2
+Dark Souls Remastered, DARK SOULS REMASTERED, darksoulsremastered.exe
+Dead Island, Dead Island, DeadIslandGame
+DEFCON, DEFCON, defcon.bin.x86
+Democracy 3, Democracy 3, Democracy3.bin.x86
+Divinity: Original Sin 2, Divinity Original Sin 2, supporttool.exe
 Dolphin, org.kde.dolphin, dolphin
+Don't Starve Together, Don't Starve Together, dontstarve_steam
 Don't Starve, Don't Starve, dontstarve_steam
+DOOM, DOOM, doom64vk.exe
 Double Action: Boogaloo, Double Action Boogaloo, hl2_linux
+Duke Nukem 3D: Megaton Edition, Duke Nukem 3D Megaton Edition, duke3d
 Emacs, emacs, Emacs
 Etcher, Etcher, etcher
+Event[0], Event[0], event0.exe
 f.lux, fluxgui, Fluxapp.py
+Factorio, Factorio, factorio
+Fallout Shelter, Fallout Shelter, falloutshelter.exe
+FATE, FATE, fate.exe
+FEZ, FEZ, FEZ.bin.x86_64
 Firefox Nigthly, firefox-nightly, Nightly
+Firewatch, Firewatch, fw.x86_64
 FoxitReader, FoxitReader, FoxitReader
-Geogebra, geogebra, org-geogebra-desktop-GeoGebra3D
+Frostpunk, Frostpunk, frostpunk.exe
+Frozen Synapse, Frozen Synapse, FrozenSynapse
+FTL: Faster Than Light, FTL Faster Than Light, FTL
 Genymotion, genymobile-genymotion, Genymotion
 Genymotion Player, genymotion-player, Genymotion Player
+Geogebra, geogebra, org-geogebra-desktop-GeoGebra3D
 GitKraken, GitKraken, GitKraken
 Gns3, gns3, gns3
 GNU Octave, www.octave.org-octave, Octave-gui
@@ -29,6 +68,9 @@ Goodvibes, com.elboulangero.Goodvibes, goodvibes
 Google Chrome (beta), google-chrome-beta, Google-chrome-beta
 Google Chrome (stable), google-chrome, Google-chrome-stable
 Google Chrome (unstable), google-chrome-unstable, Google-chrome-unstable
+Grand Theft Auto V, Grand Theft Auto V, gta5.exe
+Guacamelee! Gold Edition, Guacamelee Gold Edition,game-bin
+Guacamelee! Super Turbo Championship Edition, Guacamelee Super Turbo Championship Edition, steam_app_275390
 Half-Life, Half-Life, hl_linux
 Half-Life Blue Shift, Half-Life Blue Shift, hl_linux
 Half-Life Deathmatch Source, Half-Life Deathmatch Source, hl_linux
@@ -39,46 +81,110 @@ Half-Life 2 Deathmatch, Half-Life 2 Deathmatch, hl2_linux
 Half-Life 2 Episode One, Half-Life 2 Episode One, hl2_linux
 Half-Life 2 Episode Two, Half-Life 2 Episode Two, hl2_linux
 Half-Life 2 Lost Coast, Half-Life 2 Lost Coast, hl2_linux
+Hearts of Iron IV, Hearts of Iron IV, hoi4
+Heave Ho, Heave Ho, heaveho.exe
 Heimdall Frontend, heimdall, heimdall-frontend
+Hollow Knight, Hollow Knight, hollow_knight.x86_64
+Hotline Miami 2, Hotline Miami 2, HotlineMiami2
 HP Device Manager, hplip, hp-toolbox
 IcedTea-Web Control Panel, itweb-settings, net-sourceforge-jnlp-controlpanel-CommandLine
+Ichi, Ichi, ichi.exe
+Imperator: Rome, Imperator Rome, imperator
+Insurgency, Insurgency, insurgency_linux
 Insync, insync, Insync.py
 Intellij IDEA Community Edition, intellij-idea-community, jetbrains-idea-ce
+Ittle Dew, Ittle Dew, dew.exe
 JDownloader ,jdownloader, JDownloader
 Kdenlive, org.kde.kdenlive, kdenlive
+Kentucky Route Zero, Kentucky Route Zero, KentuckyRouteZero.x86_64
+Kerbal Space Program, Kerbal Space Program, KSP.x86
+Killing Floor, Killing Floor, killingfloor-bin
+KNIGHTS, KNIGHTS, knights.exe
 Konsole, org.kde.konsole, konsole
 KRDC, org.kde.krdc, krdc
-Minecraft, minecraft, net-minecraft-bootstrap-Bootstrap
 League of Legends, playonlinux-League of Legends, LoLPatcherUx.exe
+Left 4 Dead 2, Left 4 Dead 2, Left4Dead2
 Life Is Strange, Life Is Strange, LifeIsStrange
 Limbo, LIMBO, limbo
+LYNE, LYNE, LYNE.x64
+Metro 2033 Redux, Metro 2033 Redus, metro
+Middle-Earth: Shadow of Mordor, Middle-earth Shadow of Mordor, ShadowOfMordor
+Minecraft, minecraft, net-minecraft-bootstrap-Bootstrap
+Monaco, Monaco, Monaco.bin.x86
+Move or Die, Move or Die, lt-love
+No Man's Sky, No Man's Sky, nms.exe
 Okular, okular, Okular
 OpenBazaar, openbazaar2client, openbazaar desktop client
 Outlast, Outlast, OLGame.x86_64
-PlayOnLinux, PlayOnLinux, Mainwindow.py
+Overcooked! 2, Overcooked! 2, Overcooked2.x86_64
+Pax Nova, Pax Nova, pax nova.exe
+PAYDAY 2, PAYDAY 2, payday2_release
+Penumbra: Black Plague, Penumbra Black Plague, blackplague.bin
+Penumbra: Overture, Penumbra Overture, penumbra.bin
+Penumbra: Requiem, Penumbra Requiem, requiem.bin
+Plague Inc: Evolved, Plague Inc Evolved, plagueinc
 PlayOnLinux, playonlinux, Mainwindow.py
+PlayOnLinux, PlayOnLinux, Mainwindow.py
 Portal, Portal, hl2_linux
-Portal 2, Portal 2, portal2_linux
 Portal Stories Mel, Portal Stories Mel, portal2_linux
+Portal 2, Portal 2, portal2_linux
+Prince of Persia: The Sands of Time, Prince of Persia The Sands of Time, pop.exe
+Project Zomboid, Project Zomboid, Game
 Pushbullet Indicator, extras-pushbullet-indicator, Pushbullet-indicator
 Pycharm Community Edition, pycharm, jetbrains-pycharm-ce
 Qt Creator, org.qt-project.qtcreator, QtCreator
+Retro City Rampage DX, Retro City Rampage DX, retrocityrampage
+RimWorld, RimWorld, RimWorldLinux.x86_64
+Rise to Ruins, Rise to Ruins, Rise to Ruins Update 1
+Robocraft, Robocraft, Robocraft.x86_64
+Rocket League, Rocket League, rocketleague.exe
+Rust, Rust, rust
 SFLphone, sflphone, Sflphone-client-gnome
+Sid Meier's Civilization: Beyond Earth, Sid Meier's Civilization Beyond Earth, CivBE
 Sid Meier's Civilization V, Sid Meier's Civilization V, Civ5XP
+Sid Meier's Civilization VI, Sid Meier's Civilization VI, Civ6Sub
+Spec Ops: The Line, Spec Ops The line, specops.i386
+Starbound, Starbound, starbound
+StarMade, StarMade, StarMade
+Stellaris, Stellaris, stellaris
 Sublime Text 3, sublime-text-3, Subl
 Super Hexagon, Super Hexagon, superhexagon.x86_64
+Super Meat Boy, Super Meat Boy, SuperMeatBoy
+Surviving Mars, Surviving Mars, surviving mars
 SVG Cleaner, svgcleaner, Svgcleaner-gui
+System Shock 2, System Shock 2, Shock2.exe
 Team Fortress Classic, Team Fortress Classic, hl_linux
 Team Fortress 2, Team Fortress 2, hl2_linux
 TeamViewer, com.teamviewer.TeamViewer, TeamViewer
 Telegram, telegram, TelegramDesktop
-Telegram, telegramdesktop, TelegramDesktop
 Telegram, telegram-desktop, TelegramDesktop
+Telegram, telegramdesktop, TelegramDesktop
 Terminator, terminator, terminator
+Terraria, Terraria, Terraria.bin.x86_64
+The Cave, The Cave, Cave.bin.x86
+The Elder Scrolls Online, The Elder Scrolls Online, eso64.exe
+The Settlers: Heritage of Kings, The Settlers Heritage of Kings, settlershok.exe
 The Stanley Parable, The Stanley Parable, stanley_linux
+The Swapper, The Swapper, TheSwapper.bin.x86_64
+The Walking Dead, The Walking Dead, walkingdead101.exe
+The Witcher 2, The Witcher 2, witcher2
+To The Moon, To The Moon, ToTheMoon.bin.x86_64
+Toki Tori, Toki Tori, TokiTori.bin.x86
+Tomb Raider, Tomb Raider, TombRaider
+Torchlight 2, Torchlight 2, Torchlight 2.bin.x86_64
+Total War: EMPIRE – Definitive Edition, Total War EMPIRE - Definitive Edition, game.i386
+Trine 1, Trine 1, trine1_linux_32bit
 Viber, viber, ViberPC
 Visual Studio Code, visual-studio-code, Code
 Vivaldi (Beta), vivaldi, vivaldi-preview
+Void Bastards, Void Bastards, void bastards.exe
+Voxelized, Voxelized, voxelized.exe
 Vuze, azureus, Vuze
+VVVVVV, VVVVVV, vvvvvv.x86_64
+Waking Mars, Waking Mars, wakingmars
+War Thunder, War Thunder, dagor2
 WebTorrent, webtorrent-desktop, WebTorrent
+Wolfenstein: The Old Blood, Wolfenstein The Old Blood, wolfoldblood_x64.exe
+World of Goo, World of Goo, WorldOfGoo
+XCOM: Enemy Unknown, XCOM Enemy Unknown, XCOM: Enemy Unknown
 Zotero, zotero, Zotero
