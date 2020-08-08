@@ -65,7 +65,7 @@ Almost all the application desktop files are stored in `/usr/share/applications`
 
 The script will modify the desktop file of supported applications ([list of supported applications](https://github.com/bil-elmoussaoui/StartupWMClassFixer/blob/master/database.csv)) and add/modify `StartupWMClass` key.
 
-For more informations about `StartupWMClass` see [Recognized desktop entry keys](http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s05.html).
+For more informations about `StartupWMClass` see [Recognized desktop entry keys](https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s06.html).
 
 ### How to contribute
 
